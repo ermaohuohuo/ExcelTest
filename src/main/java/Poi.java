@@ -81,7 +81,7 @@ public class Poi {
 
 
     //初始化表格中的每一行，并得到每一个单元格的值
-    public  void init(){
+    public  LinkedList[] init(){
         int rowNum = sheet.getLastRowNum() + 1;
         result = new LinkedList[rowNum];
         for(int i=0;i<rowNum;i++){
@@ -96,6 +96,7 @@ public class Poi {
                 result[i].add(str);
             }
         }
+        return result;
     }
     //控制台打印保存的表格数据
     public void show(){
@@ -108,7 +109,7 @@ public class Poi {
     }
     public static void main(String[] args) {
         Poi poi = new Poi();
-        poi.loadExcel("jxl.xls");
+        poi.loadExcel("E:/工程师导入.xlsx");
         poi.init();
         poi.show();
     }
