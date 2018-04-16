@@ -17,7 +17,7 @@ public class ReaderExcelController {
     @RequestMapping("ExcelList")
     public String ExcelList(Model model){
 
-        LinkedList[] c=readerExcelService.init();
+        LinkedList[] cs=readerExcelService.init();
         model.addAttribute("cs",cs);
     return "";
     }
