@@ -68,8 +68,10 @@
         -->
     </bean>
     <!--Mybatis的Mapper文件识别-->
+    <!--
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.huohuo.Tmall.mapper"/>
     </bean>
+    -->
 
 </beans>
