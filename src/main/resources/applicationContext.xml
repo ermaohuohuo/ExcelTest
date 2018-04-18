@@ -10,14 +10,14 @@
     </context:annotation-config>
     <context:component-scan base-package="com.huohuo.ExcelToWord.Service"></context:component-scan>
     <!--导入对数据库的配置文件-->
-    <!--
+
     <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
-    -->
-    <!---->
 
 
 
-    s
+
+
+
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <!-- 基本属性 url、user、password -->
         <property name="url" value="${jdbc.url}" />
@@ -50,11 +50,13 @@
     </bean>
 
     <!--mybatis的sessionfactory配置-->
+
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="typeAliasesPackage" value="com.huohuo.Tmall.pojo" />
+        <property name="typeAliasesPackage" value="com.huohuo.ExcelToWord.pojo" />
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
-        <!--分页插件，目前先注释，后面重构的时候才会使用
+
+        <!--分页插件，目前先注释，后面重构的时候才会使用-->
         <property name="plugins">
             <array>
                 <bean class="com.github.pagehelper.PageInterceptor">
@@ -65,13 +67,13 @@
                 </bean>
             </array>
         </property>
-        -->
+
     </bean>
+
     <!--Mybatis的Mapper文件识别-->
-    <!--
+
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.huohuo.Tmall.mapper"/>
+        <property name="basePackage" value="com.huohuo.ExcelToWord.mapper"/>
     </bean>
-    -->
 
 </beans>
