@@ -40,7 +40,7 @@ public class ClientController {
     @RequestMapping(value="/init")
     public String init(){
         System.out.println("控制台输出：初始化页面信息");
-        return "admin/client";
+        return "admin/firstPage";
     }
     /**
      * 上传Excel,读取Excel中内容
