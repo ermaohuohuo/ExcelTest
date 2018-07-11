@@ -128,6 +128,7 @@
                 q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
                 while(q[1].x<w+f) d(q[0], q[1])
             }
+
             function d(i,j){   
                 x.beginPath()
                 x.moveTo(i.x, i.y)
